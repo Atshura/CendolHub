@@ -1,0 +1,45 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Cendol", "Synapse")
+
+
+
+local Tab = Window:NewTab("Main Script")
+local Section = Tab:NewSection("Scripts")
+Section:NewButton("Inf Yeild", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+Section:NewButton("Invisible", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/2RDvCumP", true))()
+end)
+local Tab = Window:NewTab("Blox Fruit GUI")
+local Section = Tab:NewSection("GUI")
+
+Section:NewButton("Weapon Inventory", "ButtonInfo", function()
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")
+        wait(1)
+        game:GetService("Players").LocalPlayer.PlayerGui.Main.Inventory.Visible = true
+end)
+Section:NewButton("Colors", "ButtonInfo", function()
+    game:GetService("Players").LocalPlayer.PlayerGui.Main.Colors.Visible = true
+end)
+
+Section:NewButton("Fruit Shop", "ButtonInfo", function()
+    game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
+end)
+
+Section:NewButton("Titles", "ButtonInfo", function()
+    game:GetService("Players").LocalPlayer.PlayerGui.Main.Titles.Visible = true
+end)
+
+Section:NewButton("Fruit Inventory", "ButtonInfo", function()
+    game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitInventory.Visible = true
+end)
+
+local Section = Tab:NewSection("Blox Fruit Script")
+
+Section:NewButton("Ren Hub", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
+end)
+Section:NewButton("String Hub", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/StringV2/StringHub/main/BF.txt", true))()
+end)
