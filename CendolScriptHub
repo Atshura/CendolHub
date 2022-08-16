@@ -1,6 +1,9 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Cendol Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "Welcome To Cendol Hub"})
 
+ValueWs = 16
+ValueJP = 54
+
 local Tab = Window:MakeTab({
 	Name = "Main Script",
 	Icon = "rbxassetid://4483345998",
@@ -22,6 +25,44 @@ Tab:AddButton({
 	Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/2RDvCumP", true))()
   	end    
+})
+Tab:AddButton({
+	Name = "Dex",
+	Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+  	end    
+})
+local Section = Tab:AddSection({
+	Name = "Main Funtion"
+})
+
+Tab:AddSlider({
+	Name = "Walkspeed",
+	Min = 16,
+	Max = 100,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(ValueWs)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ValueWs
+	end    
+})
+
+Tab:AddSlider({
+	Name = "Jump Power",
+	Min = 54,
+	Max = 200,
+	Default = 54,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "JumpPower",
+	Callback = function(ValueJP)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = ValueJP
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "DANGER"
 })
 
 local Tab = Window:MakeTab({
