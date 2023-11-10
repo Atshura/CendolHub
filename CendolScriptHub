@@ -110,16 +110,9 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "Ren Hub",
+	Name = "Zee Hub",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
+        loadstring(game:HttpGet("https://link.trwxz.com/LS-Zee-Hub-VIP"))()
     end
-})
-
-Tab:AddButton({
-	Name = "String Hub",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/StringV2/StringHub/main/BF.txt", true))()
-  	end    
 })
 
