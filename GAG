@@ -59,7 +59,7 @@ local SelectedSeed, AutoPlantRandom, AutoPlant, AutoHarvest, AutoBuy, SellThresh
 
 local function CreateWindow()
 	local Window = ReGui:Window({
-		Title = `{GameInfo.Name} | Cendol`,
+		Title = `{GameInfo.Name} | CendolBakso`,
         Theme = "GardenTheme",
 		Size = UDim2.fromOffset(300, 200)
 	})
@@ -463,7 +463,7 @@ PlantNode:Button({
 --// Auto-Harvest
 local HarvestNode = Window:TreeNode({Title="Auto-Harvest 🚜"})
 AutoHarvest = HarvestNode:Checkbox({
-	Value = True,
+	Value = true,
 	Label = "Enabled"
 })
 HarvestNode:Separator({Text="Ignores:"})
